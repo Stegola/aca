@@ -1,0 +1,8 @@
+<%= form_for @player do |f| %>
+    <%= f.label :Ime %>
+    <%= f.text_field :name %><br>
+    
+    <%= select("player", "team_id", Team.all.collect {|team| [ team.name, team.id ] }, {include_blank: 'Teams:'}) %>
+
+    <%= f.submit %>
+<% end %>    

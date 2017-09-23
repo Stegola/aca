@@ -1,0 +1,15 @@
+<h1>Teams#show</h1>
+<p>Find me in app/views/teams/show.html.erb</p>
+
+<table>
+    <tr>
+    <th>Igraci:</th>
+<%= @team.name %>: </br>
+
+<% @team.players.each do |player| %>
+   <td> <%= player.name %></td>
+   </tr>
+<% end %>
+</table>
+
+<%= link_to "Back", teams_path %>
